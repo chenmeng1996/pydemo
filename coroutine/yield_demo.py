@@ -4,7 +4,7 @@ def consumer():
         n = yield r
         if not n:
             return
-        print('[CONSUMER] Consuming %s...' % n)
+        print("[CONSUMER] Consuming {0}...".format(n))
         r = '200 OK'
 
 def produce(c):
@@ -12,9 +12,9 @@ def produce(c):
     n = 0
     while n < 5:
         n = n + 1
-        print('[PRODUCER] Producing %s...' % n)
+        print("[PRODUCER] Producing {0}...".format(n))
         r = c.send(n)
-        print('[PRODUCER] Consumer return: %s' % r)
+        print("[PRODUCER] Consumer return: {0}".format(r))
     c.close()
 
 c = consumer()
