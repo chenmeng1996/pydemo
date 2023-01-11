@@ -1,0 +1,28 @@
+From: Some One <someone@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+        boundary="XXXXboundary text"
+
+This is a multipart message in MIME format.
+
+--XXXXboundary text
+Content-Type: text/plain
+
+--XXXXboundary text
+Content-Transfer-Encoding: base64
+11
+2222
+3333333333333333333
+4444444444444444444444444444444444444444444444444444444444444444444444444444
+555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+
+this is the body text
+
+--XXXXboundary text
+Content-Type: text/plain;
+Content-Disposition: attachment;
+        filename="test.txt"
+
+this is the attachment text
+
+--XXXXboundary text--
